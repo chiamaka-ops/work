@@ -1,0 +1,306 @@
+body { 
+  font-family: "karma", sans-serif;
+  margin: 0;
+  background: #fff;
+  line-height: 1.5;
+  padding-left: 8px;
+  padding-right: 8px;
+ 
+}
+
+
+.topbar {
+  font-family: "Times New Roman",Georgia,serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  font-size: 30px;
+  top: 0;
+  padding-bottom: 18px;
+
+}
+
+.menu-btn {
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.mail {
+  text-decoration: none;
+
+
+}
+
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a,
+.sidebar  .closebtn {
+  padding: 15px 25px;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#menu-toggle:checked  .sidebar {
+  right: 0;
+}
+
+#menu-toggle:checked  .content {
+  opacity: 0.4s;
+  transition: opacity 0.4s;
+  
+}
+/* Top navigation  */
+.topnav {
+  font-family: "karma"sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topnav h1 {
+  font-weight: normal;
+  margin: 0;
+  font-size: 22px;
+}
+
+
+
+/* Dropdown menu */
+.dropdown {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 0.3s ease;
+}
+
+
+.dropdown a {
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.dropdown a:hover {
+  background: #f0f0f0;
+}
+.powered em {
+   font-family: "Georgia", serif;
+  border-bottom: 1px solid #353434;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  border: none;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  flex-direction: row;
+}
+
+.gallery article {
+  background: white;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.gallery h3 {
+  margin: 10px 0 5px;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Karma", sans-serif;
+   
+}
+
+.gallery p {
+  color: #555;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin: 30px 0;
+  
+  
+}
+
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 0 3px;
+  transition: all 0.3s ease;
+}
+
+.pagination a.active {
+  background: black;
+  color: white;
+}
+
+.pagination a:hover {
+  background: #ddd;
+}
+
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+  margin: 20px;
+  border-top: 1px solid #e0dcdc;
+  
+}
+
+
+.about img {
+  width: 200%;
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 40px 10%;
+  text-align: left;
+  border-top: 1px solid #e0dcdc;
+ font-family: 'Times New Roman',Georgia,serif ;
+}
+
+.footer-box {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.footer-box h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+
+}
+
+.footer-box p {
+  font-size: 14px;
+  color: #555;
+}
+.color {
+  border-bottom: 1px solid #e0dcdc;
+  margin-bottom: 10%;
+}
+
+.post {
+  display: flex;
+  margin: 20px 0;
+}
+
+.post img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+   gap: 10px;
+  row-gap: 16px;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  font-family: 'Times New Roman',Georgia,serif ;
+
+
+}
+
+.tag  {
+  background:rgb(110, 109, 109);
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+
+
+.tag.active {
+  background: black;
+  color: white;
+}
+
+/* Responsive design */
+@media (min-width: 600px) {
+  .topnav {
+    padding: 15px 40px;
+  }
+
+  .about {
+    margin: 40px auto;
+    width: 80%;
+  }
+}
+
+@media (min-width: 900px) {
+  .menu {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .dropdown {
+    display: flex ;
+    position: relative;
+    flex-direction: row;
+    background: none;
+    border: none;
+    opacity: 1;
+    transform: none;
+    width: auto;
+    gap: 20px;
+  }
+
+  .dropdown a {
+    border: none;
+    padding: 0;
+    color: #000;
+  }
+
+  .dropdown a:hover {
+    background: none;
+  }
+
+  
+}
